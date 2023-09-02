@@ -1,10 +1,10 @@
 #!/bin/bash
 #
-set chosen = $(printf "Apagar\nReiniciar\nCerrar" | rofi -dmenu -i)
+chosen=$(printf "Apagar\nReiniciar\nCerrar" | rofi -dmenu -i)
 
 case "$chosen" in
-	"Apagar") poweroff ;;
-	"Reiniciar") shutdown -r ;;
+	"Apagar") systemctl poweroff ;;
+	"Reiniciar") systemctl reboot ;;
 	"Cerrar") i3-msg exit ;;
 	*) exit 1 ;;
 esac
