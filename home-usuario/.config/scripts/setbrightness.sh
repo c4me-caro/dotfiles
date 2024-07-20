@@ -27,6 +27,9 @@ grafica=$(ls /sys/class/backlight)
 # Sientete libre de editarlo a tu gusto pues desconozco como funcionen otras graficas y por favor hazmelo saber
 
 archivobrillo="/sys/class/backlight/$grafica/brightness"
+
+sudo chmod 777 $archivobrillo
+
 brilloactual="$(cat $archivobrillo)"
 brillonuevo=10
 brillomax=4882

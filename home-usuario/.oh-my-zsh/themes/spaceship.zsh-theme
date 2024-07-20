@@ -1,1 +1,1 @@
-spaceship.zsh-theme
+./custom/themes/spaceship-prompt/spaceship.zsh-theme
